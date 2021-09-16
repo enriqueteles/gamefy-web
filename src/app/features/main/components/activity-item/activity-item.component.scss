@@ -1,0 +1,30 @@
+@import 'variables';
+
+input[type=checkbox] {
+  transform: scale(1.5);
+}
+
+h3 {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+
+  color: $gray-700;
+}
+
+p {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+
+  display: flex;
+  align-items: center;
+
+  color: $gray-600;
+}

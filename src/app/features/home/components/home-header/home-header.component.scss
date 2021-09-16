@@ -1,0 +1,36 @@
+@import 'variables.scss';
+
+.navbar {
+  margin: 0 200px;
+}
+
+.navbar-nav > li {
+  margin-right: 200px;
+}
+
+.navbar-nav a.nav-link {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+
+  color: #fff;
+  text-decoration: none;
+
+  margin-left: 5vw;
+
+  &:hover {
+    color: #333;
+  }
+}
+
+.btn-login {
+  background-color: lighten($primary, 10%);
+
+  &:hover {
+    background-color: darken($primary, 10%);  
+  }
+}
+

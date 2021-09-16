@@ -1,0 +1,27 @@
+<div class="container align-content-center text-center">
+  <div class="container">
+    <img [src]="userProfile" class="profile mt-5 mb-3" alt="">
+    <label for="file-upload">
+      <fa-icon class="edit-img" [icon]="penIcon" size="lg"><input type="file" id="myFile" name="filename"></fa-icon>
+    </label>
+    <input type="file" id="file-upload" name="filename" class="d-none" (change)="handleImageInput($event.target)">
+  </div>
+  <p class="name">Enrique Teles</p>
+
+  <div class="points d-inline-block p-2 mt-4 w-100 text-center">
+    <img src="assets/icons/ruby.png" alt="" width="30" height="30">
+    <p>2641</p>
+    <img src="assets/icons/coin.png" alt="" width="30" height="30">
+    <p>2641</p>
+  </div>
+  
+  <div class="links card d-inline-block p-2 mt-4 w-100">
+    <img src="assets/icons/bell.png" alt="Notificações" height="30">
+    <img src="assets/icons/chat.png" alt="Chat" height="30">
+    <fa-icon [icon]="questionIcon" size="lg"></fa-icon>
+    <fa-icon [icon]="bellIcon" size="lg"></fa-icon>
+    <fa-icon [icon]="settingsIcon" size="lg"></fa-icon>
+    <a ><fa-icon routerLink="/" (click)="onLogout()" [icon]="logoutIcon" size="lg"></fa-icon></a>
+  </div>
+  
+</div>

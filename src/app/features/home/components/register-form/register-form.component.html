@@ -1,0 +1,81 @@
+<!-- <div class="modal-header">
+  <h5 class="modal-title" id="exampleModalLabel">Cadastrando nova Conta</h5>
+  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div> -->
+
+<div class="modal fade" id="registerModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <form class="modal-body" [formGroup]="formData" (ngSubmit)="onSubmit()">
+        <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h1 class="text-center mt-4 text-primary">Cadastrando Nova Conta</h1>
+        <p class="text-center">Bom te ver por aqui</p>
+      
+        <div class="mb-3">
+          <label for="nameInput" class="form-label">Nome</label>
+          <input type="text" class="form-control" id="nameInput" aria-describedby="nameHelp" formControlName="name">
+          <span class="text-danger"
+            *ngIf="(formDataControl.name.touched || submitted) && formDataControl.name.errors?.required">
+            Nome é obrigatório
+          </span>
+        </div>
+      
+      
+        <div class="mb-3">
+          <label for="emailInput" class="form-label">Endereço de Email</label>
+          <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" formControlName="email" email>
+          <div id="emailHelp" class="form-text">Seu melhor endereço de email.</div>
+          <span class="text-danger"
+            *ngIf="(formDataControl.email.touched || submitted) && formDataControl.email.errors?.required">
+            Email é obrigatório
+          </span>
+        </div>
+        
+        <div class="mb-3">
+          <label for="usernameInput" class="form-label">Nome de usuário</label>
+          <input type="text" class="form-control" id="usernameInput" aria-describedby="usernameHelp" formControlName="username">
+          <div id="usernameHelp" class="form-text">Você utilizará seu nome de usuário para se conectar com outras pessoas.</div>
+          <span class="text-danger"
+            *ngIf="(formDataControl.username.touched || submitted) && formDataControl.username.errors?.required">
+            Username é obrigatório
+          </span>
+        </div>
+      
+        <div class="mb-3">
+          <label for="passwordInput" class="form-label">Senha</label>
+          <input type="password" class="form-control" id="passwordInput" aria-describedby="passwordHelp" formControlName="password">
+          <!-- <div id="passwordHelp" class="form-text">Restrição.</div> -->
+          <span class="text-danger"
+            *ngIf="(formDataControl.password.touched || submitted) && formDataControl.password.errors?.required">
+            Senha é obrigatório
+          </span>
+        </div>
+        <div class="mb-3">
+          <label for="passwordAgainInput" class="form-label">Repetir Senha</label>
+          <input type="password" class="form-control" id="passwordAgainInput" aria-describedby="passwordAgainHelp" formControlName="confirmPassword">
+          <!-- <div id="passwordHelp" class="form-text">Restrição.</div> -->
+          <span class="text-danger"
+            *ngIf="(formDataControl.confirmPassword.touched || submitted) && formDataControl.confirmPassword.pristine">
+            É necessário confirmar sua senha
+          </span>
+          <span class="text-danger"
+            *ngIf="(formDataControl.confirmPassword.touched || submitted) && formDataControl.confirmPassword.hasError('equalsTo')">
+            As senhas passadas são diferentes
+          </span>
+        </div>
+
+        <div *ngIf="!!errorMessage" class="alert alert-danger" role="alert">
+          {{errorMessage}}
+        </div>
+      
+        <div class="mt-3 mb-3">
+          <button type="submit" class="btn btn-primary w-100">Realizar Cadastro</button>
+        </div>
+        <div class="mb-3">
+          <button type="button" class="btn btn-outline-dark w-100" data-bs-dismiss="modal" aria-label="Close">Cancelar Cadastro</button>
+        </div>
+      
+      </form>
+    </div>
+  </div>
+</div>

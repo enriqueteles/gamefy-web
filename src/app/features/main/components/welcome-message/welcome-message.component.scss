@@ -1,0 +1,37 @@
+@import 'variables';
+
+span {
+  padding-left: 10px;
+}
+
+h1 {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 55px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.03em;
+
+  span {
+    font-weight: 800;
+  }
+}
+
+p {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+
+  color: $gray-800;
+
+  span {
+    color: $primary;
+    font-weight: 800;
+  }
+}
